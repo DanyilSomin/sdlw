@@ -23,7 +23,6 @@ void quit() {
 
 void delay(uint32_t delay) {
   SDL_Delay(delay);
-  SDL_Log("%i", delay);
 }
 
 }

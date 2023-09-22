@@ -17,20 +17,20 @@ FrameTimer::FrameTimer(uint64_t targetFramerate)
   _lastTime = SDL_GetTicks64();
 }
 
-uint64_t FrameTimer::resetTimeBeforeNextFrame() {
-  const auto result = timeBeforeNextFrame();
-
-  reset();
-
-  return result;
-}
-
 uint64_t FrameTimer::timeBeforeNextFrame() const {
   const auto elapsed = timeElapsed();
 
   if (elapsed >= _timePeriod) return 0;
 
   return _timePeriod - elapsed;
+}
+
+uint64_t FrameTimer::resetAndGetElapsed() {
+  const auto result = timeElapsed();
+
+  reset();
+
+  return result;
 }
 
 uint64_t FrameTimer::timeElapsed() const {
@@ -40,5 +40,4 @@ uint64_t FrameTimer::timeElapsed() const {
 void FrameTimer::reset() {
   _lastTime = SDL_GetTicks64();
 }
-
 }
