@@ -1,0 +1,9 @@
+[submodule "3rdparty/SDL"]
+	path = 3rdparty/SDL
+	url = git@github.com:libsdl-org/SDL.git
+[submodule "3rdparty/SDL_image"]
+	path = 3rdparty/SDL_image
+	url = git@github.com:libsdl-org/SDL_image.git
+[submodule "3rdparty/SDL_ttf"]
+	path = 3rdparty/SDL_ttf
+	url = git@github.com:libsdl-org/SDL_ttf.git
