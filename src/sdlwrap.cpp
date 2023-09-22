@@ -21,4 +21,9 @@ void quit() {
   TTF_Quit();
 }
 
+void delay(uint32_t delay) {
+  SDL_Delay(delay);
+  SDL_Log("%i", delay);
+}
+
 }
